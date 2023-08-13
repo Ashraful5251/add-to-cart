@@ -1,0 +1,278 @@
+ {
+  margin: 0;
+  padding: 0;
+}
+font {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Basic styling for the navigation bar */
+.navbar {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Styling for active link */
+.nav-links li a.active {
+  color: #ff9900;
+}
+
+/* Responsive navigation */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333;
+    width: 200px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .navbar {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    position: relative;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+  }
+}
+
+.buy-now-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fffbf0;
+  text-align: center;
+  padding: 80px 0;
+}
+.model {
+  width: 549px;
+  height: 559px;
+  padding: 0 50px 0 50px;
+}
+.buy-now-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.buy-now-content h2 {
+  color: #fabe4c;
+  font-family: Bebas Neue;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.buy-now-content p {
+  color: #3e3e3e;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
+
+.buy-now-button {
+  background: linear-gradient(180deg, #a4bc46 0%, #85a019 100%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.buy-now-button:hover {
+  background-color: #0056b3;
+}
+
+.product-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.add-to-cart {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: #0056b3;
+}
+
+/* Optional: Apply hover effect on the "Add to Cart" button */
+.add-to-cart:hover {
+  background-color: #0056b3;
+}
+.feature-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.feature {
+  text-align: center;
+  padding: 20px;
+}
+
+.feature img {
+  max-width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.feature h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  color: #666;
+  font-size: 16px;
+}
+.footer-section {
+  background-color: #333;
+  color: white;
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.footer-logo img {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.footer-links ul {
+  list-style: none;
+  margin-left: 20px;
+}
+
+.footer-links h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.footer-payment img {
+  max-width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.footer-social {
+  margin-bottom: 20px;
+}
+
+.social-icon {
+  color: white;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-text {
+  font-size: 14px;
+  text-align: center;
+}
