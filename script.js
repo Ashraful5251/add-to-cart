@@ -39,6 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function redirectToCart() {
     // You can change "cart.html" to the actual URL of your cart page
-    window.location.href = "cart.html";
+    window.location.href = "index.html";
   }
 });

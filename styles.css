@@ -1,4 +1,4 @@
- {
+body {
   margin: 0;
   padding: 0;
 }
@@ -7,10 +7,10 @@ font {
   font-family: "Roboto", sans-serif;
 }
 
-/* Basic styling for the navigation bar */
+/*Styling for the navigation bar */
 .navbar {
-  background-color: #333;
-  color: white;
+  background-color: #fffbf0;
+  color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,7 +35,7 @@ font {
 
 .nav-links li a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 /* Styling for active link */
@@ -133,8 +133,8 @@ font {
 .product-section {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   padding: 40px;
+  gap: 80px;
 }
 
 .product-card {
@@ -155,21 +155,23 @@ font {
 }
 
 .product-card h3 {
-  font-size: 20px;
+  font-size: 40px;
   margin-bottom: 10px;
+  font-weight: 500px;
 }
 
 .product-card p {
-  color: #666;
-  font-size: 16px;
+  color: black;
+  font-size: 38px;
   margin-bottom: 15px;
+  font-weight: 400px;
 }
 
 .add-to-cart {
-  background-color: #007bff;
+  background: linear-gradient(180deg, #a4bc46 0%, #85a019 100%);
   color: white;
-  border: none;
-  padding: 5px 10px;
+  border-radius: 30px;
+  padding: 20px 50px;
   cursor: pointer;
 }
 
