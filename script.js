@@ -1,44 +1,19 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const addToCartButtons = document.querySelectorAll(".add-to-cart");
-  const cartCountElement = document.querySelector(".cart-count");
-  const cartTotalElement = document.querySelector(".cart-total");
-  const cartItems = [];
+// Get all the "Buy Now" buttons
+const buyNowButtons = document.querySelectorAll(".buy-now-button");
 
-  let cartCount = 0;
-  let cartTotal = 0;
+// Add event listeners to the "Buy Now" buttons
+buyNowButtons.forEach((button) => {
+  button.addEventListener("click", function () {
+    const productCard = this.closest(".product-card");
+    const productName = productCard.querySelector(".product-name").textContent;
+    const productPrice = parseFloat(
+      productCard.querySelector(".product-price").textContent.replace("$", "")
+    );
 
-  addToCartButtons.forEach((button) => {
-    button.addEventListener("click", addToCart);
+    // You can perform any action here when the "Buy Now" button is clicked,
+    // such as adding the product to the cart, redirecting to a checkout page, etc.
+    console.log(
+      `Product "${productName}" with price $${productPrice} added to cart.`
+    );
   });
-
-  function addToCart(event) {
-    const productPrice = parseFloat(event.target.getAttribute("data-price"));
-    const productName = event.target.getAttribute("data-name");
-
-    cartItems.push({ name: productName, price: productPrice });
-
-    cartCount++;
-    cartTotal += productPrice;
-
-    updateCartCount();
-    updateCartTotal();
-  }
-
-  function updateCartCount() {
-    cartCountElement.textContent = cartCount;
-  }
-
-  function updateCartTotal() {
-    cartTotalElement.textContent = `$${cartTotal.toFixed(2)}`;
-  }
-
-  const checkoutButton = document.querySelector(".checkout-button");
-  if (checkoutButton) {
-    checkoutButton.addEventListener("click", redirectToCart);
-  }
-
-  function redirectToCart() {
-    // You can change "cart.html" to the actual URL of your cart page
-    window.location.href = "index.html";
-  }
 });
