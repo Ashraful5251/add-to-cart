@@ -1,6 +1,5 @@
 var shoppingCart = (function () {
   cart = [];
-
   function Item(name, price, count) {
     this.name = name;
     this.price = price;
@@ -15,6 +14,7 @@ var shoppingCart = (function () {
   // Load cart
   function loadCart() {
     cart = JSON.parse(localStorage.getItem("shoppingCart"));
+    console.log(cart);
   }
   if (localStorage.getItem("shoppingCart") != null) {
     loadCart();
@@ -60,6 +60,7 @@ var shoppingCart = (function () {
 
   // Remove all items from cart
   obj.removeItemFromCartAll = function (name) {
+    console.log(name);
     for (var item in cart) {
       if (cart[item].name === name) {
         cart.splice(item, 1);
